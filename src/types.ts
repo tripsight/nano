@@ -17,17 +17,18 @@ declare global {
 
   export namespace Deno {}
 
-  export namespace JSX {
-    interface IntrinsicElements {
-      [elemName: string]: any
-    }
-    interface ElementClass {
-      render: any
-    }
-    interface ElementChildrenAttribute {
-      children: any
-    }
-  }
+  // Note - We remove JSX override here when installing alongside react.
+  // export namespace JSX {
+  //   interface IntrinsicElements {
+  //     [elemName: string]: any
+  //   }
+  //   interface ElementClass {
+  //     render: any
+  //   }
+  //   interface ElementChildrenAttribute {
+  //     children: any
+  //   }
+  // }
 }
 // This export keeps the backward compatibility with the module resolution system in deno < 1.23 version.
 export {}
